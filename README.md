@@ -1,7 +1,6 @@
 <h1 align="center">Соціальна мережа студентів та викладачів КПІ</h1>
 <h2 align="center">
 
-![motto](https://www.canva.com/design/DAEyQZhdKKw/UI0uGa4qgDSBYR0YIdzjfw/view?utm_content=DAEyQZhdKKw&utm_campaign=designshare&utm_medium=link&utm_source=shareyourdesignpanel)
 <img src="https://www.canva.com/design/DAEyQZhdKKw/UI0uGa4qgDSBYR0YIdzjfw/view?utm_content=DAEyQZhdKKw&utm_campaign=designshare&utm_medium=link&utm_source=shareyourdesignpanel" >
 
 </h2>
