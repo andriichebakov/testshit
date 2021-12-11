@@ -72,11 +72,11 @@ Toolkit, Ant Design;
 Методи: **GET, POST, DELETE**
 
 **GET**</p>
-Перевіряє чи авторизований користувач.
+*Перевіряє чи авторизований користувач.*</p>
 Return: {'data': {'id': int(cookies['uid'])}, 'errors': []}
 
 **POST**</p>
-Авторизувати користувача та встановлює cookie
+*Авторизувати користувача та встановлює cookie*</p>
 
 Expected JSON request: {
 				‘login’: …,
@@ -85,7 +85,7 @@ Expected JSON request: {
 Return: {'data': {'id': user.uid}, 'errors': []}
 
 **DELETE**</p>
-Вийти з аккаунту користувача
+*Вийти з аккаунту користувача*</p>
 Return {'data': {}}, 'errors': []}
 
 ## /user/<int:uid></p>
@@ -93,7 +93,7 @@ Return {'data': {}}, 'errors': []}
 Uid - id користувача (integer)
 
 **GET**</p>
-Перевіряє чи авторизований користувач.
+*Перевіряє чи авторизований користувач.*</p>
 Return:{'data': 
 {'id': user.uid, 
 'login': user.login,
@@ -103,7 +103,7 @@ Return:{'data':
 А також в залежності від user.utype.id повератає department та group
 
 **POST**</p>
-Створити нового користувача та встановити cookie
+*Створити нового користувача та встановити cookie*</p>
 
 Expected JSON request: {
 				‘login’: …,
@@ -114,18 +114,18 @@ Expected JSON request: {
 	Return: {'data': {'id': new_user.uid}, 'errors': []}
 
 **DELETE**</p>
-Видалити користувача
+*Видалити користувача*</p>
 Return {'data': {}}, 'errors': []}
 
 **PUT**</p>
-Оновити інформацію про користувача
+*Оновити інформацію про користувача*</p>
 Return {'data': {}}, 'errors': []}
 
 ## /user/channels</p>
 Методи: **GET**
 
 **GET**</p>
-Отримати канали, на які підписаний користувач
+*Отримати канали, на які підписаний користувач*</p>
 Return: {'data': {'items': items, 'total': len(items)}, 'errors': []}
 
 ## /channel/<int:cid></p>
@@ -133,7 +133,7 @@ Return: {'data': {'items': items, 'total': len(items)}, 'errors': []}
 сid - id каналу (integer)
 
 **GET**</p>
-Отримати інформацію про канал
+*Отримати інформацію про канал*</p>
 Return: {'data': 
 {'id': channel.cid, 
 'name': channel.name,
@@ -141,15 +141,15 @@ Return: {'data':
 'photo': channel.photo.path}, 'errors': []}
 
 **POST**</p>
-	Створити новий канал
-	Return: {'data': {'id': new_channel.cid}, 'errors': []}
+*Створити новий канал*</p>
+Return: {'data': {'id': new_channel.cid}, 'errors': []}
 
 **DELETE**</p>
-Видалити користувача
+*Видалити користувача*</p>
 Return {'data': {}}, 'errors': []}
 
 **PUT**</p>
-Оновити інформацію про канал
+*Оновити інформацію про канал*</p>
 Return {'data': {}}, 'errors': []}
 
 ## /channel/<int:cid>/members</p>
@@ -157,7 +157,7 @@ Return {'data': {}}, 'errors': []}
 cid - id каналу
 
 **GET**</p>
-Отримати список учасників каналу
+*Отримати список учасників каналу*</p>
 Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 
 ## /channel/<int:cid>/posts</p>
@@ -165,7 +165,7 @@ Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 cid - id каналу
 
 **GET**</p>
-Отримати список постів даного каналу
+*Отримати список постів даного каналу*</p>
 Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 
 ## /posts/<int:pid></p>
@@ -173,22 +173,22 @@ Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 pid - id посту
 
 **GET**</p>
-Отримати інформацію про пост
+*Отримати інформацію про пост*</p>
 Return {'data': data}, 'errors': []}
 
 **POST**</p>
-	Створити новий канал
+*Створити новий канал*</p>
 Expected JSON request: {
 				‘cid’: …
 			}
 
-	Return: {'data': {'id': new_post.id}, 'errors': []}
+Return: {'data': {'id': new_post.id}, 'errors': []}
 
 ## /uploads/<filename></p>
 Методи: **GET**
 
 **GET**</p>
-Доступ до статичного файлу filename
+*Доступ до статичного файлу filename*</p>
 
-Return файл з папкою static
+Return *файл з папкою static*
 
