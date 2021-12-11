@@ -78,79 +78,79 @@ Return: {'data': {'id': int(cookies['uid'])}, 'errors': []}
 **POST**</p>
 *Авторизувати користувача та встановлює cookie*</p>
 
-Expected JSON request: {
+Expected JSON request: `{
 				‘login’: …,
 				‘password: …
-			}
-Return: {'data': {'id': user.uid}, 'errors': []}
+			}`</p>
+Return: `{'data': {'id': user.uid}, 'errors': []}`
 
 **DELETE**</p>
 *Вийти з аккаунту користувача*</p>
-Return {'data': {}}, 'errors': []}
+Return: `{'data': {}}, 'errors': []}`
 
 ## /user/<int:uid></p>
-Методи: **GET, POST, PUT, DELETE**
+Методи: **GET, POST, PUT, DELETE**</p>
 Uid - id користувача (integer)
 
 **GET**</p>
 *Перевіряє чи авторизований користувач.*</p>
-Return:{'data': 
+Return: `{'data': 
 {'id': user.uid, 
 'login': user.login,
 'name': user.name,
 'status': user.utype.name,
-'photo': user.photo.path}, 'errors': []}
-А також в залежності від user.utype.id повератає department та group
+'photo': user.photo.path}, 'errors': []}`</p>
+А також в залежності від user.utype.id повератає *department* та *group*
 
 **POST**</p>
 *Створити нового користувача та встановити cookie*</p>
 
-Expected JSON request: {
+Expected JSON request: `{
 				‘login’: …,
 				‘password: …, 
 				‘Name’: …,
 				‘Status’: ...
-			}
-	Return: {'data': {'id': new_user.uid}, 'errors': []}
+			}`</p>
+Return: `{'data': {'id': new_user.uid}, 'errors': []}`
 
 **DELETE**</p>
 *Видалити користувача*</p>
-Return {'data': {}}, 'errors': []}
+Return: `{'data': {}}, 'errors': []}`
 
 **PUT**</p>
 *Оновити інформацію про користувача*</p>
-Return {'data': {}}, 'errors': []}
+Return: `{'data': {}}, 'errors': []}`
 
 ## /user/channels</p>
 Методи: **GET**
 
 **GET**</p>
 *Отримати канали, на які підписаний користувач*</p>
-Return: {'data': {'items': items, 'total': len(items)}, 'errors': []}
+Return: `{'data': {'items': items, 'total': len(items)}, 'errors': []}`
 
 ## /channel/<int:cid></p>
-Методи: **GET, PUT,POST, DELETE**
+Методи: **GET, PUT,POST, DELETE**</p>
 сid - id каналу (integer)
 
 **GET**</p>
 *Отримати інформацію про канал*</p>
-Return: {'data': 
+Return: `{'data': 
 {'id': channel.cid, 
 'name': channel.name,
 'description': channel.description,
-'photo': channel.photo.path}, 'errors': []}
+'photo': channel.photo.path}, 'errors': []}`
 
 **POST**</p>
 *Створити новий канал*</p>
-Return: {'data': {'id': new_channel.cid}, 'errors': []}
+Return: `{'data': {'id': new_channel.cid}, 'errors': []}`
 
 **DELETE**</p>
 *Видалити користувача*</p>
-Return {'data': {}}, 'errors': []}
+Return: `{'data': {}}, 'errors': []}`
 
 **PUT**</p>
 *Оновити інформацію про канал*</p>
-Return {'data': {}}, 'errors': []}
+Return: `{'data': {}}, 'errors': []}`
 
 ## /channel/<int:cid>/members</p>
 Методи: **GET**
@@ -158,31 +158,30 @@ cid - id каналу
 
 **GET**</p>
 *Отримати список учасників каналу*</p>
-Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
+Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /channel/<int:cid>/posts</p>
-Методи: **GET**
+Методи: **GET**</p>
 cid - id каналу
 
 **GET**</p>
 *Отримати список постів даного каналу*</p>
-Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
+Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /posts/<int:pid></p>
-Методи: **GET, PUT,POST, DELETE**
+Методи: **GET, PUT,POST, DELETE**</p>
 pid - id посту
 
 **GET**</p>
 *Отримати інформацію про пост*</p>
-Return {'data': data}, 'errors': []}
+Return: `{'data': data}, 'errors': []}`
 
 **POST**</p>
 *Створити новий канал*</p>
-Expected JSON request: {
+Expected JSON request: `{
 				‘cid’: …
-			}
-
-Return: {'data': {'id': new_post.id}, 'errors': []}
+			}`</p>
+Return: `{'data': {'id': new_post.id}, 'errors': []}`
 
 ## /uploads/<filename></p>
 Методи: **GET**
