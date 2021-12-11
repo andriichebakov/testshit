@@ -19,7 +19,7 @@
 
 </p>
 
-## Опис
+# Опис
 
 **Наші цілі**</p>
 Соціальна мережа студентів та викладачів КПІ створена задля того, аби забезпечити якісну комунікацію студентів та викладачів КПІ у
@@ -66,4 +66,129 @@ Toolkit, Ant Design;
 - Забезпечено доступ до мережі для не менш ніж 30 000 користувачів;
 - Обмежено розмір відправлених файлів до 100 МБ;
 
-## API
+# API</p>
+
+## /session</p>
+Методи: GET, POST, DELETE
+
+GET
+Перевіряє чи авторизований користувач.
+Return: {'data': {'id': int(cookies['uid'])}, 'errors': []}
+
+POST
+Авторизувати користувача та встановлює cookie
+
+Expected JSON request: {
+				‘login’: …,
+				‘password: …
+			}
+Return: {'data': {'id': user.uid}, 'errors': []}
+
+DELETE
+Вийти з аккаунту користувача
+Return {'data': {}}, 'errors': []}
+
+/user/<int:uid>
+Методи: GET, POST, PUT, DELETE
+Uid - id користувача (integer)
+
+GET
+Перевіряє чи авторизований користувач.
+Return:{'data': 
+{'id': user.uid, 
+'login': user.login,
+'name': user.name,
+'status': user.utype.name,
+'photo': user.photo.path}, 'errors': []}
+А також в залежності від user.utype.id повератає department та group
+
+	POST
+	Створити нового користувача та встановити cookie
+
+Expected JSON request: {
+				‘login’: …,
+				‘password: …, 
+				‘Name’: …,
+				‘Status’: ...
+			}
+	Return: {'data': {'id': new_user.uid}, 'errors': []}
+
+	DELETE
+Видалити користувача
+Return {'data': {}}, 'errors': []}
+
+PUT
+Оновити інформацію про користувача
+Return {'data': {}}, 'errors': []}
+
+/user/channels
+Методи: GET
+
+GET
+Отримати канали, на які підписаний користувач
+Return: {'data': {'items': items, 'total': len(items)}, 'errors': []}
+
+/channel/<int:cid>
+Методи: GET, PUT,POST, DELETE
+сid - id каналу (integer)
+
+GET
+Отримати інформацію про канал
+Return: {'data': 
+{'id': channel.cid, 
+'name': channel.name,
+'description': channel.description,
+'photo': channel.photo.path}, 'errors': []}
+
+POST
+	Створити новий канал
+	Return: {'data': {'id': new_channel.cid}, 'errors': []}
+
+DELETE
+Видалити користувача
+Return {'data': {}}, 'errors': []}
+
+PUT
+Оновити інформацію про канал
+Return {'data': {}}, 'errors': []}
+
+/channel/<int:cid>/members
+Методи: GET
+cid - id каналу
+
+GET
+Отримати список учасників каналу
+Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
+
+/channel/<int:cid>/posts
+Методи: GET
+cid - id каналу
+
+GET
+Отримати список постів даного каналу
+Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
+
+/posts/<int:pid>
+Методи: GET, PUT,POST, DELETE
+pid - id посту
+
+GET
+Отримати інформацію про пост
+Return {'data': data}, 'errors': []}
+
+POST
+	Створити новий канал
+Expected JSON request: {
+				‘cid’: …
+			}
+
+	Return: {'data': {'id': new_post.id}, 'errors': []}
+
+/uploads/<filename>
+Методи: GET
+
+GET
+Доступ до статичного файлу filename
+
+Return файл з папкою static
+
