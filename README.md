@@ -7,7 +7,7 @@
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/made%20by-silentlad-blue.svg" >
+<img src="https://img.shields.io/badge/version-v1-green" >
 
 <img src="https://img.shields.io/badge/vue-2.2.4-green.svg">
 
