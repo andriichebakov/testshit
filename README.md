@@ -1,7 +1,7 @@
 <h1 align="center">Соціальна мережа студентів та викладачів КПІ</h1>
 <h2 align="center">
 
-![Alt text](kpi.phg)
+![alt text](pngs/kpi1.png "Найкращий університет країни!")
 <img src="kpi.phg" >
 
 </h2>
