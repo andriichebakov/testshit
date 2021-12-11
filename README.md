@@ -191,3 +191,7 @@ Return: `{'data': {'id': new_post.id}, 'errors': []}`
 
 Return *файл з папкою static*
 
+# База даних
+*База  данних: PostgeSQL*</p>
+*ORM: SQLALCHEMY*
+
