@@ -7,8 +7,6 @@
   
 <img src="https://img.shields.io/badge/version-v1-green" >
 
-<img src="https://img.shields.io/badge/vue-2.2.4-green.svg">
-
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
 
 </p>
