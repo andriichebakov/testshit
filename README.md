@@ -73,7 +73,7 @@ Toolkit, Ant Design;
 
 **GET**</p>
 *Перевіряє чи авторизований користувач.*</p>
-Return: {'data': {'id': int(cookies['uid'])}, 'errors': []}
+Return: `{'data': {'id': int(cookies['uid'])}, 'errors': []}`
 
 **POST**</p>
 *Авторизувати користувача та встановлює cookie*</p>
