@@ -1,7 +1,7 @@
 <h1 align="center">Соціальна мережа студентів та викладачів КПІ</h1>
 <h2 align="center">
 
-<img src="https://prnt.sc/22ra7u1" >
+<img src="kpi.phg" >
 
 </h2>
 
