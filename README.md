@@ -69,13 +69,13 @@ Toolkit, Ant Design;
 # API</p>
 
 ## /session</p>
-Методи: GET, POST, DELETE
+Методи: **GET, POST, DELETE**
 
-GET
+**GET**</p>
 Перевіряє чи авторизований користувач.
 Return: {'data': {'id': int(cookies['uid'])}, 'errors': []}
 
-POST
+**POST**</p>
 Авторизувати користувача та встановлює cookie
 
 Expected JSON request: {
@@ -84,15 +84,15 @@ Expected JSON request: {
 			}
 Return: {'data': {'id': user.uid}, 'errors': []}
 
-DELETE
+**DELETE**</p>
 Вийти з аккаунту користувача
 Return {'data': {}}, 'errors': []}
 
-/user/<int:uid>
-Методи: GET, POST, PUT, DELETE
+## /user/<int:uid></p>
+Методи: **GET, POST, PUT, DELETE**
 Uid - id користувача (integer)
 
-GET
+**GET**</p>
 Перевіряє чи авторизований користувач.
 Return:{'data': 
 {'id': user.uid, 
@@ -102,8 +102,8 @@ Return:{'data':
 'photo': user.photo.path}, 'errors': []}
 А також в залежності від user.utype.id повератає department та group
 
-	POST
-	Створити нового користувача та встановити cookie
+**POST**</p>
+Створити нового користувача та встановити cookie
 
 Expected JSON request: {
 				‘login’: …,
@@ -113,26 +113,26 @@ Expected JSON request: {
 			}
 	Return: {'data': {'id': new_user.uid}, 'errors': []}
 
-	DELETE
+**DELETE**</p>
 Видалити користувача
 Return {'data': {}}, 'errors': []}
 
-PUT
+**PUT**</p>
 Оновити інформацію про користувача
 Return {'data': {}}, 'errors': []}
 
-/user/channels
-Методи: GET
+## /user/channels</p>
+Методи: **GET**
 
-GET
+**GET**</p>
 Отримати канали, на які підписаний користувач
 Return: {'data': {'items': items, 'total': len(items)}, 'errors': []}
 
-/channel/<int:cid>
-Методи: GET, PUT,POST, DELETE
+## /channel/<int:cid></p>
+Методи: **GET, PUT,POST, DELETE**
 сid - id каналу (integer)
 
-GET
+**GET**</p>
 Отримати інформацію про канал
 Return: {'data': 
 {'id': channel.cid, 
@@ -140,43 +140,43 @@ Return: {'data':
 'description': channel.description,
 'photo': channel.photo.path}, 'errors': []}
 
-POST
+**POST**</p>
 	Створити новий канал
 	Return: {'data': {'id': new_channel.cid}, 'errors': []}
 
-DELETE
+**DELETE**</p>
 Видалити користувача
 Return {'data': {}}, 'errors': []}
 
-PUT
+**PUT**</p>
 Оновити інформацію про канал
 Return {'data': {}}, 'errors': []}
 
-/channel/<int:cid>/members
-Методи: GET
+## /channel/<int:cid>/members</p>
+Методи: **GET**
 cid - id каналу
 
-GET
+**GET**</p>
 Отримати список учасників каналу
 Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 
-/channel/<int:cid>/posts
-Методи: GET
+## /channel/<int:cid>/posts</p>
+Методи: **GET**
 cid - id каналу
 
-GET
+**GET**</p>
 Отримати список постів даного каналу
 Return {'data': {'items': items, 'total': len(items)}}, 'errors': []}
 
-/posts/<int:pid>
-Методи: GET, PUT,POST, DELETE
+## /posts/<int:pid></p>
+Методи: **GET, PUT,POST, DELETE**
 pid - id посту
 
-GET
+**GET**</p>
 Отримати інформацію про пост
 Return {'data': data}, 'errors': []}
 
-POST
+**POST**</p>
 	Створити новий канал
 Expected JSON request: {
 				‘cid’: …
@@ -184,10 +184,10 @@ Expected JSON request: {
 
 	Return: {'data': {'id': new_post.id}, 'errors': []}
 
-/uploads/<filename>
-Методи: GET
+## /uploads/<filename></p>
+Методи: **GET**
 
-GET
+**GET**</p>
 Доступ до статичного файлу filename
 
 Return файл з папкою static
