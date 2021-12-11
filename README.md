@@ -69,7 +69,7 @@ Toolkit, Ant Design;
 # API</p>
 
 ## /session</p>
-Методи: **GET, POST, DELETE**
+Методи: GET, POST, DELETE.
 
 **GET**</p>
 *Перевіряє чи авторизований користувач.*</p>
@@ -89,7 +89,7 @@ Return: `{'data': {'id': user.uid}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /user/<int:uid></p>
-Методи: **GET, POST, PUT, DELETE**</p>
+Методи: GET, POST, PUT, DELETE.</p>
 Uid - id користувача (integer)
 
 **GET**</p>
@@ -122,14 +122,14 @@ Return: `{'data': {}}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /user/channels</p>
-Методи: **GET**
+Методи: GET.
 
 **GET**</p>
 *Отримати канали, на які підписаний користувач*</p>
 Return: `{'data': {'items': items, 'total': len(items)}, 'errors': []}`
 
 ## /channel/<int:cid></p>
-Методи: **GET, PUT,POST, DELETE**</p>
+Методи: GET, PUT,POST, DELETE.</p>
 сid - id каналу (integer)
 
 **GET**</p>
@@ -153,7 +153,7 @@ Return: `{'data': {}}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /channel/<int:cid>/members</p>
-Методи: **GET**
+Методи: GET.
 cid - id каналу
 
 **GET**</p>
@@ -161,7 +161,7 @@ cid - id каналу
 Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /channel/<int:cid>/posts</p>
-Методи: **GET**</p>
+Методи: GET.</p>
 cid - id каналу
 
 **GET**</p>
@@ -169,7 +169,7 @@ cid - id каналу
 Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /posts/<int:pid></p>
-Методи: **GET, PUT,POST, DELETE**</p>
+Методи: GET, PUT,POST, DELETE.</p>
 pid - id посту
 
 **GET**</p>
@@ -184,7 +184,7 @@ Expected JSON request: `{
 Return: `{'data': {'id': new_post.id}, 'errors': []}`
 
 ## /uploads/<filename></p>
-Методи: **GET**
+Методи: GET.
 
 **GET**</p>
 *Доступ до статичного файлу filename*</p>
