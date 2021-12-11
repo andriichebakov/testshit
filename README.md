@@ -153,7 +153,7 @@ Return: `{'data': {}}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /channel/<int:cid>/members</p>
-Методи: GET.
+Методи: GET.</p>
 cid - id каналу
 
 **GET**</p>
