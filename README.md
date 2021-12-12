@@ -250,7 +250,7 @@ Return: `{'data': {'id': new_message.id}, 'errors': []}`
 
 
 # Тестування API</p>
-**Опис**: тестування відбувається за використанням фреймворку pytest у файлі test_flask.py. Ми створюємо тестовий клієнт Flask'у, за допомогою якого відправляємо певний запит на сервер. Після отримання даних від серверу, ми перевіряємо оператором assert відповідність очікуваних та отриманих даних.
+**Опис**: тестування відбувається за використанням фреймворку pytest у файлі test_flask.py. Ми створюємо тестовий клієнт Flask'у, за допомогою якого відправляємо певний запит на сервер. Після отримання даних від серверу, ми перевіряємо оператором assert відповідність очікуваних та отриманих даних. Тести запускаються за допомогою команди pytest -v у папці з test_flaskr.py
 
 ## test_login(client)
 Ендпоїнт, що перевіряється: /api/session</p>
@@ -423,4 +423,38 @@ partner = 36
 - Дані для відправки: `{'receiverId': 2, 'text': 'halo'}`</p>
 - Очікувані дані: `{'data': {'id': ...},'errors': []}`
 
+# Результати тестування API</p>
 
+================================================= test session starts =================================================
+platform win32 -- Python 3.8.3, pytest-6.2.5, py-1.9.0, pluggy-0.13.1 -- c:\users\sinixy\appdata\local\programs\python\python38-32\python.exe
+cachedir: .pytest_cache
+rootdir: D:\AppMathOwO\7sem\DBIS\dbis_project_local
+plugins: dash-2.0.0
+collected 18 items
+
+test_flaskr.py::test_login PASSED                                                                                [  5%]
+test_flaskr.py::test_get_session PASSED                                                                          [ 11%]
+test_flaskr.py::test_logout PASSED                                                                               [ 16%]
+test_flaskr.py::test_get_user PASSED                                                                             [ 22%]
+test_flaskr.py::test_create_user PASSED                                                                          [ 27%]
+test_flaskr.py::test_edit_user PASSED                                                                            [ 33%]
+test_flaskr.py::test_get_user_channels PASSED                                                                    [ 38%]
+test_flaskr.py::test_get_channel PASSED                                                                          [ 44%]
+test_flaskr.py::test_create_channel PASSED                                                                       [ 50%]
+test_flaskr.py::test_edit_channel PASSED                                                                         [ 55%]
+test_flaskr.py::test_get_channel_posts PASSED                                                                    [ 61%]
+test_flaskr.py::test_get_post PASSED                                                                             [ 66%]
+test_flaskr.py::test_create_post PASSED                                                                          [ 72%]
+test_flaskr.py::test_get_search PASSED                                                                           [ 77%]
+test_flaskr.py::test_get_user_contacts PASSED                                                                    [ 83%]
+test_flaskr.py::test_add_contact PASSED                                                                          [ 88%]
+test_flaskr.py::test_get_direct_massages PASSED                                                                  [ 94%]
+test_flaskr.py::test_create_massage PASSED                                                                       [100%]
+
+================================================== warnings summary ===================================================
+kpi_network/test_flaskr.py::test_login
+  c:\users\sinixy\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\langhelpers.py:263: SADeprecationWarning: The 'postgres' dialect name has been renamed to 'postgresql'
+    loader = self.auto_fn(name)
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+============================================ 18 passed, 1 warning in 0.93s ============================================
