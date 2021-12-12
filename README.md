@@ -425,7 +425,7 @@ partner = 36
 
 # Результати тестування API</p>
 
-================================================= test session starts =================================================
+`================================================= test session starts =================================================
 platform win32 -- Python 3.8.3, pytest-6.2.5, py-1.9.0, pluggy-0.13.1 -- c:\users\sinixy\appdata\local\programs\python\python38-32\python.exe
 cachedir: .pytest_cache
 rootdir: D:\AppMathOwO\7sem\DBIS\dbis_project_local
@@ -458,3 +458,4 @@ kpi_network/test_flaskr.py::test_login
 
 -- Docs: https://docs.pytest.org/en/stable/warnings.html
 ============================================ 18 passed, 1 warning in 0.93s ============================================
+`
