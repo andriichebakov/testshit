@@ -426,5 +426,7 @@ partner = 36
 
 # База даних
 *База  данних: PostgeSQL*</p>
-*ORM: SQLALCHEMY*
+*ORM: SQLALCHEMY*</p>
+
+![alt text](pngs/databasekpi.png "База даних")
 
