@@ -199,7 +199,7 @@ Count - кількість елементів на сторінці
 **GET**</p>
 *Пошук користувача по логіну або імені*</p>
 
-Return: {'data': {'items': items, 'total': total}, 'errors': []}
+Return: `{'data': {'items': items, 'total': total}, 'errors': []}`
 
 ## /api/user/contacts?page=...&count=...
 Методи: GET
