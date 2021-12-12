@@ -244,9 +244,6 @@ Expected JSON request: `{
 Return: `{'data': {'id': new_message.id}, 'errors': []}`
 
 
-# База даних
-*База  данних: PostgeSQL*</p>
-*ORM: SQLALCHEMY*
 
 
 # Тестування API</p>
@@ -425,5 +422,9 @@ partner = 36
 
 # Результати тестування API</p>
 
-![alt text](pngs/kpi1.png "Результати тестування API")
+![alt text](pngs/api.png "Результати тестування API")
+
+# База даних
+*База  данних: PostgeSQL*</p>
+*ORM: SQLALCHEMY*
 
