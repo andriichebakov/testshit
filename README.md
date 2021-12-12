@@ -249,8 +249,9 @@ Return: `{'data': {'id': new_message.id}, 'errors': []}`
 *ORM: SQLALCHEMY*
 
 
-# Тестування API</p> 
-Для коректної роботи спочатку авторизовуємо користувача: `client.post('/api/session',  json={'login': 'NancyDye8533', 'password': 'NancyDye8533'})`
+# Тестування API</p>
+Тестування відбувається за використанням фреймворку pytest у файлі test_flask.py. Ми створюємо тестовий клієнт Flask'у, за допомогою якого відправляємо певний запит на сервер. Після отримання даних від серверу, ми перевіряємо оператором assert відповідність очікуваних та отриманих даних.
+
 ## test_login(client)
 Ендпоїнт, що перевіряється: /api/session</p>
 Метод, що перевіряється: POST</p>
@@ -260,7 +261,21 @@ Return: `{'data': {'id': new_message.id}, 'errors': []}`
 - Очікувані дані: `{'data': {'id': ...}, 'errors': []}`
 Тест №2:</p>
 - Опис: *перевірка чи не буде сервер авторизовувати користувача з некоректними даними*</p>
-- Дані для відправки: `{'login': 'NancyDye8533', 'password': 'NancyDye8533'}`</p>
+- Дані для відправки: `{'login': 'invalid login', 'password': 'NancyDye8533'}`</p>
+- Очікувані дані: `{'data': {},'errors': ['Invalid login or password']}`
+
+## test_get_session(client)
+Ендпоїнт, що перевіряється: /api/session</p>
+Метод, що перевіряється: GET</p>
+Для коректної роботи спочатку авторизовуємо користувача: `client.post('/api/session',  json={'login': 'NancyDye8533', 'password': 'NancyDye8533'})`</p>
+- Опис:*перевірка чи коректно записується користувачу coockie*</p>
+- Очікувані дані: `{'data': {'id': ...}, 'errors': []}`
+
+## test_logout(client)
+Ендпоїнт, що перевіряється: /api/session</p>
+Метод, що перевіряється: GET</p>
+Для коректної роботи спочатку авторизовуємо користувача: `client.post('/api/session',  json={'login': 'NancyDye8533', 'password': 'NancyDye8533'})`</p>
+- Опис:*перевірка чи коректно записується користувачу coockie*</p>
 - Очікувані дані: `{'data': {'id': ...}, 'errors': []}`
 
 
