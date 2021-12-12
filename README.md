@@ -189,7 +189,7 @@ Return: `{'data': {'id': new_post.id}, 'errors': []}`
 **GET**</p>
 *Доступ до статичного файлу filename*</p>
 
-Return *файл з папкою static*--------------------------------------------------------------
+Return *файл з папкою static*
 
 ## /api/search?query=...&page=...&count=...
 Методи: GET</p>
