@@ -425,37 +425,5 @@ partner = 36
 
 # Результати тестування API</p>
 
-================================================= test session starts =================================================</p>
-platform win32 -- Python 3.8.3, pytest-6.2.5, py-1.9.0, pluggy-0.13.1 -- c:\users\sinixy\appdata\local\programs\python\python38-32\python.exe</p>
-cachedir: .pytest_cache</p>
-rootdir: D:\AppMathOwO\7sem\DBIS\dbis_project_local</p>
-plugins: dash-2.0.0</p>
-collected 18 items</p>
 
-test_flaskr.py::test_login PASSED                                                                                [  5%]</p>
-test_flaskr.py::test_get_session PASSED                                                                          [ 11%]</p>
-test_flaskr.py::test_logout PASSED                                                                               [ 16%]</p>
-test_flaskr.py::test_get_user PASSED                                                                             [ 22%]</p>
-test_flaskr.py::test_create_user PASSED                                                                          [ 27%]</p>
-test_flaskr.py::test_edit_user PASSED                                                                            [ 33%]</p>
-test_flaskr.py::test_get_user_channels PASSED                                                                    [ 38%]</p>
-test_flaskr.py::test_get_channel PASSED                                                                          [ 44%]</p>
-test_flaskr.py::test_create_channel PASSED                                                                       [ 50%]</p>
-test_flaskr.py::test_edit_channel PASSED                                                                         [ 55%]</p>
-test_flaskr.py::test_get_channel_posts PASSED                                                                    [ 61%]</p>
-test_flaskr.py::test_get_post PASSED                                                                             [ 66%]</p>
-test_flaskr.py::test_create_post PASSED                                                                          [ 72%]</p>
-test_flaskr.py::test_get_search PASSED                                                                           [ 77%]</p>
-test_flaskr.py::test_get_user_contacts PASSED                                                                    [ 83%]</p>
-test_flaskr.py::test_add_contact PASSED                                                                          [ 88%]</p>
-test_flaskr.py::test_get_direct_massages PASSED                                                                  [ 94%]</p>
-test_flaskr.py::test_create_massage PASSED                                                                       [100%]</p>
-
-================================================== warnings summary ===================================================</p>
-kpi_network/test_flaskr.py::test_login</p>
-  c:\users\sinixy\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\langhelpers.py:263: SADeprecationWarning: The 'postgres' dialect name has been </p>renamed to 'postgresql'</p>
-    loader = self.auto_fn(name)</p>
-
--- Docs: https://docs.pytest.org/en/stable/warnings.html</p>
-============================================ 18 passed, 1 warning in 0.93s ============================================</p>
 
