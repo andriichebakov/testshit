@@ -69,7 +69,7 @@ Toolkit, Ant Design;
 # API</p>
 
 ## /session</p>
-Методи: GET, POST, DELETE.
+Методи: GET, POST, DELETE
 
 **GET**</p>
 *Перевіряє чи авторизований користувач.*</p>
@@ -89,7 +89,7 @@ Return: `{'data': {'id': user.uid}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /user/<int:uid></p>
-Методи: GET, POST, PUT, DELETE.</p>
+Методи: GET, POST, PUT, DELETE</p>
 Uid - id користувача (integer)
 
 **GET**</p>
@@ -122,14 +122,14 @@ Return: `{'data': {}}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /user/channels</p>
-Методи: GET.
+Методи: GET
 
 **GET**</p>
 *Отримати канали, на які підписаний користувач*</p>
 Return: `{'data': {'items': items, 'total': len(items)}, 'errors': []}`
 
 ## /channel/<int:cid></p>
-Методи: GET, PUT,POST, DELETE.</p>
+Методи: GET, PUT,POST, DELETE</p>
 сid - id каналу (integer)
 
 **GET**</p>
@@ -153,7 +153,7 @@ Return: `{'data': {}}, 'errors': []}`
 Return: `{'data': {}}, 'errors': []}`
 
 ## /channel/<int:cid>/members</p>
-Методи: GET.</p>
+Методи: GET</p>
 cid - id каналу
 
 **GET**</p>
@@ -161,7 +161,7 @@ cid - id каналу
 Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /channel/<int:cid>/posts</p>
-Методи: GET.</p>
+Методи: GET</p>
 cid - id каналу
 
 **GET**</p>
@@ -169,7 +169,7 @@ cid - id каналу
 Return: `{'data': {'items': items, 'total': len(items)}}, 'errors': []}`
 
 ## /posts/<int:pid></p>
-Методи: GET, PUT,POST, DELETE.</p>
+Методи: GET, PUT,POST, DELETE</p>
 pid - id посту
 
 **GET**</p>
@@ -184,12 +184,65 @@ Expected JSON request: `{
 Return: `{'data': {'id': new_post.id}, 'errors': []}`
 
 ## /uploads/<filename></p>
-Методи: GET.
+Методи: GET
 
 **GET**</p>
 *Доступ до статичного файлу filename*</p>
 
-Return *файл з папкою static*
+Return *файл з папкою static*--------------------------------------------------------------
+
+## /api/search?query=...&page=...&count=...
+Методи: GET</p>
+Page - номер сторінки (частини масиву)</p>
+Count - кількість елементів на сторінці
+
+**GET**</p>
+*Пошук користувача по логіну або імені*</p>
+
+Return: {'data': {'items': items, 'total': total}, 'errors': []}
+
+## /api/user/contacts?page=...&count=...
+Методи: GET
+
+**GET**</p>
+*Отримати контакти користувача*</p>
+
+Return: `{'data': {'items': items, 'total': comtacts_count}, 'errors': []}`
+
+## /api/contact/<int:contact_id>
+contact_id - ID контакту</p>
+Методи: POST, DELETE
+
+**POST**</p>
+*Додати новий контакт*</p>
+
+Return: `{'data': {}, 'errors': []}`
+
+**DELETE**</p>
+*Видалити контакт*</p>
+
+Return: `{'data': {}, 'errors': []}`
+
+## /api/direct/<int:partner>?page=...&count=...
+partner - ID партнера, з яким веде переписку поточний користувач</p>
+Методи: GET
+
+**GET**</p>
+*Отримати дані переписки (повідомлення) між поточним користувачем та partner'ом*</p>
+
+Return: `{'data': {'items': items, 'total': message_count}, 'errors': []}`
+
+## /api/message
+Методи: POST
+**POST**</p>
+*Надіслати повідомлення*</p>
+Expected JSON request: `{
+				‘receiverId’: …,
+				‘text: …
+			}`</p>
+
+Return: `{'data': {'id': new_message.id}, 'errors': []}`
+
 
 # База даних
 *База  данних: PostgeSQL*</p>
